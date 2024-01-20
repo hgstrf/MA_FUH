@@ -66,7 +66,7 @@ Im dritten Schritt werden die TRC-Kandidaten berechnet und bestimmt, sowie Analy
 
 
 ## Schritt 4: Clustering
-Im vierten Schritt werden verschiedenste Clusteringalgorithmen auf die zuvor prozessierten Daten angewandt. 
+Im vierten Schritt werden verschiedenste Clusteringalgorithmen auf die zuvor prozessierten Daten angewandt. Im Anschluss werden diese untersucht und eine Qualitätsbewertung vorgenommen, soweit Statistiken errechnet und Ergebnisse visualisiert.
 
 #### 4.1_kmeans.py
 - sollte immer zuerste ausgeführt werden, da hier die Ordnerstrukturen erzeugt werden
@@ -86,3 +86,18 @@ Im vierten Schritt werden verschiedenste Clusteringalgorithmen auf die zuvor pro
 - berechnet, prozessiert und visualisiert Ergebnisse der Analyse
 - für Distanzberechnung wird erneut auf Neo4j zurückgegriffen, auch hier wird Port 7687 verwendet, auch dieser kann angepasst werden
 
+
+## Schritt 5: Clustering für Graphen
+Im fünften und letzten Schritt werden die Ergebnisse des Clusterings auf die tatsächlichen Graphen angewandt, also eine inhaltliche Erweiterung durchgeführt. Dies ist der letzte Schritt, und benötigt daher die folgenden Unterordner, die in vorhergehenden Schritten erzeugt wurden:
+- publications_directory = './input/GrobidOutput/'
+- co_citations_directory = './input/co_citation_input_50_docs/'
+- centroid_directory = './input/centroidcandidates/'
+- seqclu_directory = './input/seqclu/'
+
+#### 5_extend_Graphs_by_topic_clustering.py
+- verwendet Autoreninformationen- oder Co-Zitationsinformationen
+- verwendet Clusterergebnisse
+- erzeugt mehrere Datentabellen mit Metainformationen
+- erzeugt Graphenstruktur mit thematischer Komponente
+- analysiert Ergebnisse und gibt diese aus
+- genauere Informationen zur Theorie in Ausarbeitung, Kapitel "Anwendung auf Autoren- und Co-Zitationsgraphen"
