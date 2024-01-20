@@ -1,7 +1,5 @@
 # Erweiterung von Autoren- und Co-Zitationsgraphen um inhaltliche Aspekte
-- Code zur schriftlichen Ausarbeitung
-- Enthält Hauptteil der Aufgabe sowie alle relevanten Schritte
-- Reihenfolge der Codeausführung beachten
+Dieses Repository enthält den Code zur schriftlichen Ausarbeitung. Dies beinhaltet in allererster Linie den Hauptteil der Arbeit, also den Gesamtworkflow, sowie alle weiteren, relevanten Schritte und diverse Auswertungen und Statistiken. Zu beachten ist die Reihenfolge der Codeausführung, nähere Details sind im Folgenden an relevanten Stellen gelistet.
 
 ## Erklärung des Codes der einzelnen Schritte
 Jeder Schritt wird im Folgenden genauer erläutert. Relevant hierbei ist, dass alle Schritte nacheinander befolgt werden sollen. Dies geht auch aus der Dateienbenennung der einzelnen Skripte hervor. Zusätzlich zu den im Folgenden gelieferten Informationen sind auch die jeweiligen readme.txt-Dateien (falls vorhanden) der Unterordner von Relevanz und sollten gelesen und befolgt werden.
