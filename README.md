@@ -94,6 +94,8 @@ Im fünften und letzten Schritt werden die Ergebnisse des Clusterings auf die ta
 - centroid_directory = './input/centroidcandidates/'
 - seqclu_directory = './input/seqclu/'
 
+Verwendet hierfür wird nachfolgender Code.
+
 #### 5_extend_Graphs_by_topic_clustering.py
 - verwendet Autoreninformationen- oder Co-Zitationsinformationen
 - verwendet Clusterergebnisse
