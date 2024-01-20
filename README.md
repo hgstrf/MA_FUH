@@ -4,7 +4,7 @@
 - Reihenfolge der Codeausführung beachten
 
 ## Erklärung des Codes der einzelnen Schritte
-Jeder Schritt wird im Folgenden genauer erläutert. Relevant hierbei ist, dass alle Schritte nacheinander befolgt werden sollen. Dies geht auch aus der Dateienbenennung der einzelnen Skripte hervor.
+Jeder Schritt wird im Folgenden genauer erläutert. Relevant hierbei ist, dass alle Schritte nacheinander befolgt werden sollen. Dies geht auch aus der Dateienbenennung der einzelnen Skripte hervor. Zusätzlich zu den im Folgenden gelieferten Informationen sind auch die jeweiligen readme.txt-Dateien (falls vorhanden) der Unterordner von Relevanz und sollten gelesen und befolgt werden.
 
 ## Schritt 1: Akquise der Dokumente
 Im ersten Schritt werden PDF-Dokumente akquiriert. Dieser Schritt ist optional, und kann durch eine lokale Dokumentensammlung ersetzt werden.
@@ -63,4 +63,26 @@ Im dritten Schritt werden die TRC-Kandidaten berechnet und bestimmt, sowie Analy
 - Hilfsskripte, welche den Neo4j-Graphen in das *.gexf-Format umwandeln
 - Erlaubt weitere Analyse mit Python oder Graphenanalyseapplikationen
 - Port des lokalen Neo4j-Servers: 7687, kann angepasst werden
+
+
+## Schritt 4: Clustering
+Im vierten Schritt werden verschiedenste Clusteringalgorithmen auf die zuvor prozessierten Daten angewandt. 
+
+#### 4.1_kmeans.py
+- sollte immer zuerste ausgeführt werden, da hier die Ordnerstrukturen erzeugt werden
+- wendet k-Means auf Zentroidkandidaten an
+
+#### Schritte 4.2 bis 4.4
+- enthalten Code zur Prozessierung der einzelnen Clusteralgorithmen bzw. deren Matching
+- Ergebnisse werden nach Matching gemeinsam in der durch k-Means erstellten Ordner- und Datenstruktur gespeichert
+- Reihenfolge sollte beachtet werden, jedoch nicht zwingend erforderlich
+
+#### 4.5_map_clustering_and_TRCs.py
+- matcht die Ergebnisse des Clusterings zu den TRC-Termen
+- wird für weitere Analysen benötigt
+- Ergebnisse werden in txt-Dateistruktur abgelegt
+
+#### 4.6_quality_analysis_distances_within_clusters.py und 4.6_quality_analysis_statistics_and_visualization.py
+- berechnet, prozessiert und visualisiert Ergebnisse der Analyse
+- für Distanzberechnung wird erneut auf Neo4j zurückgegriffen, auch hier wird Port 7687 verwendet, auch dieser kann angepasst werden
 
